@@ -1,0 +1,84 @@
+Basic statistics for white wine:
+MIN, MAX, AVG, MEDIAN
+	fixed acidity: 14.2, 3.8, 6.85, 6.8
+	volatile acidity: 1.1, 0.08, 0.28, 0.26
+	citric acid: 1.66, 0.0, 0.33, 0.32
+	residual sugar: 65.8, 0.6, 6.39, 5.2
+	chlorides: 0.35, 0.01, 0.05, 0.04
+	free sulfur dioxide: 289.0, 2.0, 35.31, 34.0
+	total sulfur dioxide: 440.0, 9.0, 138.36, 134.0
+	density: 1.04, 0.99, 0.99, 0.99
+	pH: 3.82, 2.72, 3.19, 3.18
+	sulphates: 1.08, 0.22, 0.49, 0.47
+	alcohol: 14.2, 8.0, 10.51, 10.4
+	quality: 9, 3, 5.88, 6
+
+Basic statistics for red wine:
+MIN, MAX, AVG, MEDIAN
+	fixed acidity: 15.9, 4.6, 8.32, 7.9
+	volatile acidity: 1.58, 0.12, 0.53, 0.52
+	citric acid: 1.0, 0.0, 0.27, 0.26
+	residual sugar: 15.5, 0.9, 2.54, 2.2
+	chlorides: 0.61, 0.01, 0.09, 0.08
+	free sulfur dioxide: 72.0, 1.0, 15.87, 14.0
+	total sulfur dioxide: 289.0, 6.0, 46.47, 38.0
+	density: 1.0, 0.99, 1.0, 1.0
+	pH: 4.01, 2.74, 3.31, 3.31
+	sulphates: 2.0, 0.33, 0.66, 0.62
+	alcohol: 14.9, 8.4, 10.42, 10.2
+	quality: 8, 3, 5.64, 6
+
+Max and min quality count for red wine: 18, 10
+Max and min quality count for white wine: 5, 20
+
+
+Red wines with quality <= 6 and alcohol >= 11and residual sugar > 5.0, sorted by total
+  sulfur dioxide in descending order. Only fisrt 2 are shown:
+
+[{'_id': ObjectId('634388cafa8b322a51179ddd'),
+  'alcohol': 11.3,
+  'quality': 6,
+  'residual sugar': 8.6,
+  'total sulfur dioxide': 148.0},
+ {'_id': ObjectId('634388cafa8b322a5117a027'),
+  'alcohol': 11.5,
+  'quality': 4,
+  'residual sugar': 12.9,
+  'total sulfur dioxide': 113.0}]
+
+White wines with alcohol <= 7.5 or quality >= 8 which have pH <= 3.0
+  and fixed acidity either 8.0 or 7.5. Full query result is shown:
+
+[{'_id': ObjectId('634388cafa8b322a5117a685'),
+  'alcohol': 12.3,
+  'fixed acidity': 7.5,
+  'pH': 2.99,
+  'quality': 8},
+ {'_id': ObjectId('634388cafa8b322a5117abfa'),
+  'alcohol': 11.2,
+  'fixed acidity': 8.0,
+  'pH': 2.98,
+  'quality': 8}]
+
+Red wines with best quality of 8 reach maximum density 0.9988 or maximum alcohol 14.0
+
+
+Increased quality by 1 for red wines where quality >= 7
+Now stats for red wine quality are: 9, 3, 5.77, 6
+
+Set quality -10, density 30 and pH -100 for white wines where quality >= 8 and pH >= 3
+Now stats for white wine are:
+Basic statistics for white wine:
+MIN, MAX, AVG, MEDIAN
+	fixed acidity: 14.2, 3.8, 6.85, 6.8
+	volatile acidity: 1.1, 0.08, 0.28, 0.26
+	citric acid: 1.66, 0.0, 0.33, 0.32
+	residual sugar: 65.8, 0.6, 6.39, 5.2
+	chlorides: 0.35, 0.01, 0.05, 0.04
+	free sulfur dioxide: 289.0, 2.0, 35.31, 34.0
+	total sulfur dioxide: 440.0, 9.0, 138.36, 134.0
+	density: 30, 0.99, 1.96, 0.99
+	pH: 3.82, -100, -0.25, 3.17
+	sulphates: 1.08, 0.22, 0.49, 0.47
+	alcohol: 14.2, 8.0, 10.51, 10.4
+	quality: 8, -10, 5.28, 6
