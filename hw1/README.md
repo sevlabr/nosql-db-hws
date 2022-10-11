@@ -79,10 +79,15 @@ While working the script measures execution time and prints results. See example
 Actually, results show that adding indices don't really improve performance in this certain case. Probably it's because
 this dataset is quite small. Only 6497 objects in total.
 
-To see an evidence that indices actually work check the screenshot below.
+To see an evidence that indices actually work check the screenshots below.
 
-![](images/explain.png)
+![](images/explain_planner_without_key.png)
+
+![](images/explain_planner_with_key.png)
 
 So the number of documents that query examine is limited to the exact number of documents with the specified value
-(1599 is the total number of documents in collection db.red).
+(1599 is the total number of documents in collection db.red). Also, before index is created planner's stage is
+*'COLLSCAN'* which [means](https://www.mongodb.com/docs/manual/reference/explain-results/) that Mongo scans the whole
+collection. After index is created planner changes strategy and performs *.find()* using 2 stages: *'IXSCAN'* and
+*'FETCH'*. This means that it first scanning index keys and then retrieving necessary documents.
 
