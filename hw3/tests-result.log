@@ -1,0 +1,202 @@
+Execution time for function load_json is 1.7972 seconds
+Execution time for function prepare_for_zset is 1.469 seconds
+Execution time for function prepare_for_list is 1.5782 seconds
+
+
+
+----- Tests for string -----
+Execution time for function convert_json_to_str is 3.0671 seconds
+Execution time for function save_as_str is 3.1838 seconds
+Execution time for function get_str is 0.2809 seconds
+Execution time for function delete_key is 0.0048 seconds
+
+
+
+----- String performance tests -----
+Execution time for function convert_json_to_str is 2.2953 seconds
+Execution time for function save_as_str is 2.404 seconds
+Execution time for function get_str is 0.2609 seconds
+Execution time for function delete_key is 0.0049 seconds
+Execution time for function convert_json_to_str is 3.0876 seconds
+Execution time for function save_as_str is 3.2208 seconds
+Execution time for function get_str is 0.2751 seconds
+Execution time for function delete_key is 0.0049 seconds
+Execution time for function convert_json_to_str is 2.2047 seconds
+Execution time for function save_as_str is 2.3182 seconds
+Execution time for function get_str is 0.2545 seconds
+Execution time for function delete_key is 0.0053 seconds
+Execution time for function convert_json_to_str is 2.3272 seconds
+Execution time for function save_as_str is 2.4445 seconds
+Execution time for function get_str is 0.2647 seconds
+Execution time for function delete_key is 0.0057 seconds
+Execution time for function convert_json_to_str is 2.3734 seconds
+Execution time for function save_as_str is 2.4882 seconds
+Execution time for function get_str is 0.2692 seconds
+Execution time for function delete_key is 0.0066 seconds
+Execution time for function convert_json_to_str is 2.9352 seconds
+Execution time for function save_as_str is 3.0401 seconds
+Execution time for function get_str is 0.2558 seconds
+Execution time for function delete_key is 0.0049 seconds
+Execution time for function convert_json_to_str is 2.8865 seconds
+Execution time for function save_as_str is 3.0598 seconds
+Execution time for function get_str is 0.4124 seconds
+Execution time for function delete_key is 0.0074 seconds
+Execution time for function convert_json_to_str is 2.6167 seconds
+Execution time for function save_as_str is 2.7278 seconds
+Execution time for function get_str is 0.2437 seconds
+Execution time for function delete_key is 0.0046 seconds
+Execution time for function convert_json_to_str is 2.2455 seconds
+Execution time for function save_as_str is 2.3519 seconds
+Execution time for function get_str is 0.2507 seconds
+Execution time for function delete_key is 0.0053 seconds
+Execution time for function convert_json_to_str is 2.2381 seconds
+Execution time for function save_as_str is 2.3685 seconds
+Execution time for function get_str is 0.2681 seconds
+Execution time for function delete_key is 0.0051 seconds
+
+
+
+----- String performance test result -----
+  Set    Get    Delete
+-----  -----  --------
+2.642   0.28     0.005
+
+
+
+----- Tests for sorted set -----
+Execution time for function load_zset_chunk is 4.2064 seconds
+Execution time for function del_zset_chunk is 0.1516 seconds
+Execution time for function load_zset_rows is 106.4311 seconds
+
+
+
+Testing different removal approaches...
+--- Remove one element using zrem ---
+Removed element using zrem in 0.0001 seconds
+Removed element using zrem in 0.0001 seconds
+Removed element using zrem in 0.0001 seconds
+Removed element using zrem in 0.0002 seconds
+Removed element using zrem in 0.0002 seconds
+Test removal of non-existent elemet 'test_string' took 0.0001 seconds
+
+--- Remove elements using zrembyscore ---
+Removed from 0 to 5000 in 0.0001 seconds
+Removed from 10000 to 50000 in 0.0001 seconds
+Removed from 200000 to 600000 in 0.0002 seconds
+Removed from 700000 to 700000 in 0.0001 seconds
+Removed from 700005 to 700005 in 0.0001 seconds
+
+
+
+Tesing different get approaches...
+--- Test zrange ---
+Got elements from 0 to -1 in 1.8744 seconds (by insertion order)
+Got elements from 10 to 20 in 0.0005 seconds (by insertion order)
+Got elements from 100 to 200 in 0.0007 seconds (by insertion order)
+Got elements from 1000 to 4000 in 0.0072 seconds (by insertion order)
+Got elements from 100000 to 200000 in 0.2457 seconds (by insertion order)
+
+--- Test zrangebyscore ---
+Got elements from 0 to 781969 in 1.8217 seconds (by score)
+Got elements from 10 to 20 in 0.0006 seconds (by score)
+Got elements from 500 to 600 in 0.0007 seconds (by score)
+Got elements from 13000 to 14000 in 0.0026 seconds (by score)
+Got elements from 300000 to 400000 in 0.2199 seconds (by score)
+
+
+
+--- Test zcard and zcount ---
+Sorted set cardinality is: 781969
+Zcard executes in 0.0005 seconds
+
+--- Testing zcount ---
+Counted elements from 0 to 781969 in 0.0003 seconds (by score)
+Counted elements from 10 to 20 in 0.0003 seconds (by score)
+Counted elements from 600 to 700 in 0.0003 seconds (by score)
+Counted elements from 7500 to 8500 in 0.0003 seconds (by score)
+Counted elements from 60000 to 70000 in 0.0003 seconds (by score)
+Counted elements from 250000 to 350000 in 0.0002 seconds (by score)
+Count results:  [767959, 11, 99, 987, 9872, 97619]
+
+
+
+----- Tests for HashSet -----
+--- Test adding elements to a single HSet ---
+Execution time for function set_single_hset is 1.0837 seconds
+Number of added elements: 7961
+
+--- Test getters from a single HSet ---
+--- Testing HGet on single HSet ---
+Got elements from 0 to 10 in 0.001 seconds
+Got elements from 50 to 100 in 0.0046 seconds
+Got elements from 500 to 1000 in 0.0625 seconds
+Got elements from 3000 to 4000 in 0.1391 seconds
+
+--- Test HGetAll on a single set ---
+Average time for HGetAll (7961 elements) is 0.0383 seconds
+
+--- Test removing from a single HSet ---
+Deleted HSet elements with keys from 0 to 10 in 0.0016 seconds
+Deleted HSet elements with keys from 50 to 100 in 0.0063 seconds
+Deleted HSet elements with keys from 500 to 1000 in 0.0569 seconds
+Deleted HSet elements with keys from 3000 to 4000 in 0.1428 seconds
+
+
+--- Test adding elements to multiple HSets ---
+Execution time for function set_hset_rows is 3.1588 seconds
+
+Deleted all HSet rows in 0.0759 seconds
+
+
+
+----- Tests for LinkedList -----
+--- Pushing elements ---
+Execution time for function test_list_push is 1.7337 seconds
+Pushed 796121 elements
+
+--- Popping elements ---
+Execution time for function test_list_pop is 1.9502 seconds
+Poped 796121 elements
+
+--- Test LIndex ---
+LIndex on element with index 100 works in 0.000228 seconds
+LIndex on element with index 1000 works in 0.000164 seconds
+LIndex on element with index 10000 works in 0.000142 seconds
+LIndex on element with index 100000 works in 0.000152 seconds
+LIndex on element with index 700000 works in 0.000147 seconds
+
+
+--- Test LRem ---
+Deleted element with index 0 in 0.000157 seconds
+Deleted element with index 1 in 0.000179 seconds
+Deleted element with index 2 in 0.000176 seconds
+Deleted element with index 3 in 0.000132 seconds
+Deleted element with index 4 in 0.000133 seconds
+Deleted element with index 100 in 0.000137 seconds
+Deleted element with index 101 in 0.000136 seconds
+Deleted element with index 102 in 0.000134 seconds
+Deleted element with index 103 in 0.000136 seconds
+Deleted element with index 104 in 0.000135 seconds
+Deleted element with index 1000 in 0.000175 seconds
+Deleted element with index 1001 in 0.00017 seconds
+Deleted element with index 1002 in 0.000192 seconds
+Deleted element with index 1003 in 0.000169 seconds
+Deleted element with index 1004 in 0.000172 seconds
+Deleted element with index 10000 in 0.000531 seconds
+Deleted element with index 10001 in 0.00054 seconds
+Deleted element with index 10002 in 0.000536 seconds
+Deleted element with index 10003 in 0.000548 seconds
+Deleted element with index 10004 in 0.000612 seconds
+Deleted element with index 100000 in 0.004352 seconds
+Deleted element with index 100001 in 0.004228 seconds
+Deleted element with index 100002 in 0.004214 seconds
+Deleted element with index 100003 in 0.003757 seconds
+Deleted element with index 100004 in 0.003746 seconds
+
+
+--- Test LTrim ---
+Trimmed list to [10..700000] in 0.000493 seconds
+Trimmed list to [20..100000] in 0.000425 seconds
+Trimmed list to [30..50000] in 0.000393 seconds
+Trimmed list to [40..10000] in 0.000377 seconds
+Trimmed list to [50..1000] in 0.000305 seconds

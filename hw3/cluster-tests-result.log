@@ -1,0 +1,20 @@
+Execution time for function load_json is 1.7229 seconds
+Execution time for function prepare_data_for_cluster is 1.0413 seconds
+Execution time for function fill_cluster is 167.5265 seconds
+Key index in JSON: 213
+Key: 2014-07-01 10:15:00
+Value: "Lat": 40.7589, "Lon": -73.9896, "Base": B02682
+Time to live: 3556 seconds
+Key index in JSON: 14241
+Key: 2014-07-15 08:40:00
+Value: "Lat": 40.7221, "Lon": -74.0017, "Base": B02764
+Time to live: 3599 seconds
+Key index in JSON: 214523
+Key: 2014-07-24 07:55:00
+Value: "Lat": 40.7299, "Lon": -74.0038, "Base": B02682
+Time to live: 3586 seconds
+Key index in JSON: 67232
+Key: 2014-07-06 10:45:00
+Value: "Lat": 40.6998, "Lon": -73.9506, "Base": B02764
+Time to live: 3598 seconds
+Execution time for function test_cluster_delete is 0.3017 seconds

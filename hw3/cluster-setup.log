@@ -1,0 +1,42 @@
+Setting up Redis Cluster...
+Setting up port 7000
+Success!
+Setting up port 7001
+Success!
+Setting up port 7002
+Success!
+Run redis-server...
+Port 7000
+Success!
+Port 7001
+Success!
+Port 7002
+Success!
+Starting cluster...
+>>> Performing hash slots allocation on 3 nodes...
+Master[0] -> Slots 0 - 5460
+Master[1] -> Slots 5461 - 10922
+Master[2] -> Slots 10923 - 16383
+M: e96057f3304a18b71d6e14abffb685a6b7ec9781 172.21.0.2:7000
+   slots:[0-5460] (5461 slots) master
+M: 2544036f4c501e648796e6a1996050458c9da113 172.21.0.2:7001
+   slots:[5461-10922] (5462 slots) master
+M: 51d39df2cbd84ac6c71f7b4896259c06fae1a442 172.21.0.2:7002
+   slots:[10923-16383] (5461 slots) master
+>>> Nodes configuration updated
+>>> Assign a different config epoch to each node
+>>> Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join
+..
+>>> Performing Cluster Check (using node 172.21.0.2:7000)
+M: e96057f3304a18b71d6e14abffb685a6b7ec9781 172.21.0.2:7000
+   slots:[0-5460] (5461 slots) master
+M: 2544036f4c501e648796e6a1996050458c9da113 172.21.0.2:7001
+   slots:[5461-10922] (5462 slots) master
+M: 51d39df2cbd84ac6c71f7b4896259c06fae1a442 172.21.0.2:7002
+   slots:[10923-16383] (5461 slots) master
+[OK] All nodes agree about slots configuration.
+>>> Check for open slots...
+>>> Check slots coverage...
+[OK] All 16384 slots covered.
+Cluster started!
